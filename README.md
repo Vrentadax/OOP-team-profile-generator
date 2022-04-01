@@ -5,7 +5,7 @@
 
 ## Description
 
-A program to generate a professional readme based on user input.
+A program to generate a professional team page based on user input including the options for manager/engineer/intern.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -17,7 +17,7 @@ A program to generate a professional readme based on user input.
 
 ## Installation
 
-Run 'npm i' to install relevent files.
+Run 'npm i' or 'npm install' to install relevent files.
 
 ## Usage
 
@@ -25,7 +25,7 @@ Run 'node index' from the project root directory and follow prompts.
   
   
 
-https://user-images.githubusercontent.com/97055456/159809063-a91e7d29-c501-4afe-a04c-98464a27091f.mp4
+
 
 
 

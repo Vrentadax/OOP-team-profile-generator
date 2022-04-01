@@ -27,6 +27,10 @@ Run 'node index' from the project root directory and follow prompts.
 
 
 
+https://user-images.githubusercontent.com/97055456/161345567-3d4c9152-73bd-40f1-8b25-310bbc5ee1b0.mp4
+
+
+
 
 
 

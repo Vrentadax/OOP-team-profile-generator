@@ -1,12 +1,12 @@
 const Intern = require('../lib/Intern');
 
-it('can set the school', () => {
+it('can set school', () => {
     const testSchool = 'School of Awesome';
     const test = new Intern('John Doe', 123, 'email@email.com', testSchool);
     expect(test.school).toBe(testSchool);
 });
 
-it('can use getSchool() to return the school', () => {
+it('can use getSchool() to return school', () => {
     const testSchool = 'School of Awesome';
     const test = new Intern('John Doe', 123, 'email@email.com', testSchool);
     expect(test.getSchool()).toBe(testSchool);

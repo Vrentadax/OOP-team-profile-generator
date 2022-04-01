@@ -61,7 +61,7 @@ const init = () => {
                         return false;
                     };
                 }
-            },
+            }
         ]).then(manager => {
             const team = new Manager(
                 manager.managerName,
@@ -81,7 +81,7 @@ const init = () => {
                 name: 'role',
                 message: `What kind of employee do you want to add to the team?`,
                 choices: ['Engineer', 'Intern', 'Finished!']
-            },
+            }
         ]).then(input => {
             switch(input.role) {
                 case 'Engineer':

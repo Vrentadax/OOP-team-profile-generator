@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 const teamGen = team => {
+    // create html with provided info from manager obj into a 'card'
     const managerGen = manager => {
         return `
                 <div class="card">
@@ -19,6 +20,7 @@ const teamGen = team => {
         `;
     };
 
+    // create html with provided info from engineer obj into a 'card'
     const engineerGen = engineer => {
         return `
                 <div class="card">
@@ -37,6 +39,7 @@ const teamGen = team => {
         `;
     };
 
+    // create html with provided info from intern obj into a 'card'
     const internGen = intern => {
         return `
                 <div class="card">
@@ -58,6 +61,7 @@ const teamGen = team => {
 
     const html = [];
 
+    // joins each generated 'card' to be inserted into base html
     team.forEach(employee => {
         switch(employee.getRole()) {
             case 'Manager':
@@ -74,6 +78,7 @@ const teamGen = team => {
     return html.join('');
 };
 
+// blueprint of the base html
 const generatePage = arr => {
     return `
 <!DOCTYPE html>
@@ -105,6 +110,7 @@ const generatePage = arr => {
 `;
 };
 
+// writes finished page to an 'index.html' file under /dist
 const writeFile = fileContent => {
     return new Promise((resolve, reject) => {
         fs.writeFile('./dist/index.html', fileContent, err => {

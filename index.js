@@ -7,7 +7,10 @@ const Intern = require('./lib/Intern');
 
 const employees = [];
 
+// inquirer prompts
 const init = () => {
+
+    // inquirer dialog for setting manager
     const managerGen = () => {
         inquirer.prompt([
             {
@@ -74,6 +77,7 @@ const init = () => {
         });
     };
 
+    // inquirer dialog for generating team (choose type of members/finish building)
     const teamGen = () => {
         inquirer.prompt([
             {
@@ -85,17 +89,21 @@ const init = () => {
         ]).then(input => {
             switch(input.role) {
                 case 'Engineer':
+                    // goes to engineerGen() to create profile for engineer
                     engineerGen();
                     break;
                 case 'Intern':
+                    // goes to internGen() to create profile for intern
                     internGen();
                     break;
                 default:
+                    // finished option, goes to creat html file
                     writeFile(generatePage(employees));
             };
         });
     };
 
+    // inquirer dialog for setting engineer
     const engineerGen = () => {
         inquirer.prompt([
             {
@@ -158,10 +166,12 @@ const init = () => {
                 engineer.github
                 );
             employees.push(team);
+            // return to teamGen() to add more or finish team
             teamGen();
         });
     };
 
+    // inquirer dialog for setting intern
     const internGen = () => {
         inquirer.prompt([
             {
@@ -224,6 +234,7 @@ const init = () => {
                 intern.school
                 );
             employees.push(team);
+            // return to teamGen() to add more or finish team
             teamGen();
         });
     };

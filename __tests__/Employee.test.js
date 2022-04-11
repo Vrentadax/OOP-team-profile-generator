@@ -1,10 +1,12 @@
 const Employee = require('../lib/Employee');
 
+// test for creating object
 it('can create the Employee object', () => {
     const test = new Employee();
     expect(typeof(test)).toBe('object');
 });
 
+// tests for setting values
 it('Can set the name', () => {
     const testName = 'John Doe';
     const test = new Employee(testName);
@@ -23,6 +25,7 @@ it('Can set the email address', () => {
     expect(test.email).toBe(testEmail);
 });
 
+// tests to see if functions can be used to return values
 it('Can use getName() to return the name', () => {
     const testName = 'John Doe';
     const test = new Employee(testName);
